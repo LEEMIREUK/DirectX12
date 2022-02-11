@@ -45,6 +45,9 @@
     <ClInclude Include="RootSignature.h">
       <Filter>Engine</Filter>
     </ClInclude>
+    <ClInclude Include="ConstantBuffer.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -74,9 +77,12 @@
     <ClCompile Include="RootSignature.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
+    <ClCompile Include="ConstantBuffer.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="default.hlsl">
+    <FxCompile Include="..\Resources\Shader\default.hlsl">
       <Filter>Shader</Filter>
     </FxCompile>
   </ItemGroup>
