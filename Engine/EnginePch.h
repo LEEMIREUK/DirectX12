@@ -88,7 +88,7 @@ enum
 	CBV_REGISTER_COUNT = CBV_REGISTER::END,
 	SRV_REGISTER_COUNT = static_cast<uint8>(SRV_REGISTER::END) - CBV_REGISTER_COUNT,
 	REGISTER_COUNT = CBV_REGISTER_COUNT + SRV_REGISTER_COUNT,
-}; 
+};
 
 struct WindowInfo
 {
@@ -100,9 +100,15 @@ struct WindowInfo
 
 struct Vertex
 {
+	Vertex() {}
+	Vertex(Vec3 p, Vec2 u, Vec3 n, Vec3 t)
+		: pos(p), uv(u), normal(n), tangent(t)
+	{
+	}
 	Vec3 pos;
-	Vec4 color;
 	Vec2 uv;
+	Vec3 normal;
+	Vec3 tangent;
 };
 
 #define DECLARE_SINGLE(type)		\
@@ -122,7 +128,7 @@ public:								\
 #define CMD_LIST		GEngine->GetCmdQueue()->GetCmdList()
 #define RESOURCE_CMD_LIST	GEngine->GetCmdQueue()->GetResourceCmdList()
 #define ROOT_SIGNATURE	GEngine->GetRootSignature()->GetSignature()
- 
+
 #define INPUT				GET_SINGLE(Input)
 #define DELTA_TIME			GET_SINGLE(Timer)->GetDeltaTime()
 
