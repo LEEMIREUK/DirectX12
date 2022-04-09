@@ -7,6 +7,7 @@
 #include "SceneManager.h"
 #include "Light.h"
 #include "Resources.h"
+#include "InstancingManager.h"
 
 void Engine::Init(const WindowInfo& info)
 {
